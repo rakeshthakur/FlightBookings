@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookingService.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace PaymentService
 {
@@ -25,6 +29,16 @@ namespace PaymentService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            ////services.AddDbContext<BookingContext>(options =>
+            //// options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+
+            ////services.AddDbContext<BookingContext>(options =>
+            ////    options.UseSqlServer(Configuration.GetValue<string>("ConnectionString"));
+
+            //options.UseSqlServer(connection));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +49,7 @@ namespace PaymentService
                 app.UseDeveloperExceptionPage();
             }
 
+            
             app.UseMvc();
         }
     }
