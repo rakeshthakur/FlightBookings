@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightService", "FlightService\FlightService.csproj", "{3E788195-8CB3-44AA-A63B-BEE5927294D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlightService", "FlightService\FlightService.csproj", "{3E788195-8CB3-44AA-A63B-BEE5927294D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingService", "BookingService\BookingService.csproj", "{6BBF8CC5-2CA8-4EF7-8E8D-D58437700842}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookingService", "BookingService\BookingService.csproj", "{6BBF8CC5-2CA8-4EF7-8E8D-D58437700842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentService", "PaymentService\PaymentService.csproj", "{AFECEE34-B908-4561-A215-18C50AF7C7ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentService", "PaymentService\PaymentService.csproj", "{AFECEE34-B908-4561-A215-18C50AF7C7ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{01361DB3-5F5E-4B45-9166-9CC73A41B85E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReactClient", "ReactClient", "{60AB1F7E-08EA-4563-A5EC-747CD9344D7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DDBFAE53-FA11-4C81-9E18-365F593391C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +36,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{60AB1F7E-08EA-4563-A5EC-747CD9344D7D} = {01361DB3-5F5E-4B45-9166-9CC73A41B85E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {646A31E4-13B1-4162-879B-B138A755330C}
