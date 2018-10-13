@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import Login from "../Login";
 import Logout from "../Logout";
-import SearchForm from "../search/SearchForm";
+import Search from "../search/Search";
 import Booking from "../booking/Booking";
 import Payment from "../payment/PaymentForm";
 
@@ -13,7 +13,7 @@ class Content extends React.Component {
       <div>
         <Switch>
           <Route exact path="/" component={Login} />
-          <Route path="/search" component={SearchForm} />
+          <Route path="/search" component={Search} />
           <Route path="/booking" component={Booking} />
           <Route path="/payment" component={Payment} />
           <Route path="/logout" component={Logout} />

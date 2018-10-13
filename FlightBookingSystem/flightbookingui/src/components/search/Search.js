@@ -8,9 +8,9 @@ export default class Search extends Component {
     super();
     this.state = {
       searchParameters: {
-        source: "",
-        destination: "",
-        date: "",
+        source: "Chennai",
+        destination: "New Delhi",
+        date: new Date().toLocaleDateString(),
         travelClass: ""
       },
       flights: []
@@ -23,7 +23,7 @@ export default class Search extends Component {
   render() {
     return (
       <div className="searchbox">
-        <SearchForm />
+        <SearchForm params={this.state.searchParameters} />
         <DisplayFlights flights={this.state.flights} />
       </div>
     );
