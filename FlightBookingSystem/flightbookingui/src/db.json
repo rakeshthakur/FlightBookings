@@ -1,0 +1,14 @@
+{
+  "flights": [
+    {
+      "id": 1,
+      "FlightNumber": "6E-2003",
+      "Source": "Chennai",
+      "Destination": "New Delhi",
+      "FirstClassFare": 7000,
+      "BusinessClassFare": 5500,
+      "EconomyClassFare": 3500
+    },
+    {}
+  ]
+}
