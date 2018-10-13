@@ -68,17 +68,20 @@ namespace FlightService.Controllers
             return item;
         }
 
-        [HttpGet("Source/Destination/DepartureDateTime", Name = "GetFlightsByFilter")]
-        public IEnumerable<FlightSchedules> GetByFiltersAsync(FlightSchedules flightSchedules)
+        [HttpGet]
+        [Route("{Source}/{Destination}/{DepartureDateTime}")]
+        public IEnumerable<FlightSchedules> GetByFiltersAsync(string Source, string Destination, DateTime DepartureDateTime)
         {
 
-            var result = _flightSchedule.GetAll();            
-            if (result != null)
+            var schedule = _flightSchedule.GetAll();
+            var flight = _flightDetails.GetAll();
+            if (schedule != null)
             {
-                return result.Where(x => x.Source == flightSchedules.Source);
+                var result = schedule.Where(x => x.Source.ToLower() == Source.ToLower() && x.Destination.ToLower() == Destination.ToLower() && x.DepartureDateTime.ToString("MM/dd/yyyy") == DepartureDateTime.ToString("MM/dd/yyyy"));
+                return result;
             }
             else
-                return result;
+                return null;
         }
 
     }
